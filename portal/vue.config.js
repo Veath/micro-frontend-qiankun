@@ -1,6 +1,8 @@
 module.exports = {
   publicPath: '/',
   devServer: {
+    host: '0.0.0.0',
+    port: 8080,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Credentials': 'true'

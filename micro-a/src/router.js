@@ -6,8 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  // base: process.env.BASE_URL,
-  base: '/vue',
+  base: '/vue/',
   routes: [
     {
       path: '/',
@@ -15,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about/:id',
+      path: '/about/',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

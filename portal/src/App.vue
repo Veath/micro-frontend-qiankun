@@ -3,9 +3,9 @@
     <el-container>
       <el-header>
         <div id="nav">
-          <router-link to="/portal">Home</router-link>|
-          <router-link to="/vue">micro-a</router-link>|
-          <router-link to="/vue/about/123">micro-a-About</router-link>
+          <a @click="goto('Home', '/portal/')">Home</a> | 
+          <a @click="goto('micro-a project Home', '/vue/')">micro-a project Home</a> | 
+          <a @click="goto('micro-a project About', '/vue/about')">micro-a project About</a> |
         </div>
       </el-header>
       <el-main>
@@ -19,7 +19,12 @@
 <script>
 export default {
   name: 'app',
-  props: ['appContent']
+  props: ['appContent'],
+  methods: {
+    goto(title, href) {
+      window.history.pushState({}, title, href);
+    }
+  }
 };
 </script>
 

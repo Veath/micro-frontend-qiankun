@@ -1,7 +1,8 @@
 module.exports = {
-  // TODO: 动态路径
-  publicPath: 'http://localhost:8081',
+  publicPath: 'http://localhost:8081/',
   devServer: {
+    host: '0.0.0.0',
+    port: 8081,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Credentials': 'true'
