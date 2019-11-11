@@ -3,14 +3,12 @@
     <el-container>
       <el-header>
         <div id="nav">
-          <a @click="goto('Home', '/portal/')">Home</a> | 
           <a @click="goto('micro-a project Home', '/vue/')">micro-a project Home</a> | 
           <a @click="goto('micro-a project About', '/vue/about')">micro-a project About</a> |
         </div>
       </el-header>
       <el-main>
         <div v-html="appContent"></div>
-        <router-view />
       </el-main>
     </el-container>
   </div>
@@ -22,7 +20,7 @@ export default {
   props: ['appContent'],
   methods: {
     goto(title, href) {
-      window.history.pushState({}, title, href);
+      this.$router.push(href);
     }
   }
 };
