@@ -10,6 +10,8 @@ Vue.use(elementUI);
 
 let instance = null;
 
+console.log('micro-a main window -->', window);
+
 export async function bootstrap() {
   console.log('vue app bootstraped');
 }
